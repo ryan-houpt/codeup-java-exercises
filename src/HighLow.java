@@ -10,7 +10,8 @@ public class HighLow {
         Random rand = new Random();
 
         int gameNumber = rand.nextInt(100) + 1;
-        int userGuesses = 10;
+        int userGuessesDown = 10;
+        int userGuessesTotal = 0;
         int userGuess;
 
 
@@ -23,18 +24,20 @@ public class HighLow {
 
             if (userGuess > gameNumber) {
                 System.out.println("LOWER!");
-                userGuesses--;
+                userGuessesDown--;
+                userGuessesTotal++;
             } if (userGuess < gameNumber) {
                 System.out.println("HIGHER!");
-                userGuesses--;
+                userGuessesDown--;
+                userGuessesTotal++;
             }
 
-        } while (userGuess != gameNumber && userGuesses > 0);
+        } while (userGuess != gameNumber && userGuessesDown > 0);
 
-        if (userGuesses == 0) {
+        if (userGuessesDown == 0) {
             System.out.println("Sorry... you ran out of guesses");
         } else {
-            System.out.println("Congrats! You guess the number! It only took you... " + userGuesses + " trys.");
+            System.out.println("Congrats! You guess the number! It only took you... " + (userGuessesTotal + 1) + " attempts.");
         }
     }
 
