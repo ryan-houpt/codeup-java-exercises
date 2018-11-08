@@ -14,9 +14,9 @@ public class Bob {
             if (scanner.nextLine().equals( "yes")) {
                 System.out.println("What do you want to say?");
                 String userResponse = scanner.nextLine();
-                if (userResponse.contains("?")) {
+                if (userResponse.endsWith("?")) {
                     System.out.println("sure");
-                } if (userResponse.contains("!")) {
+                } if (userResponse.endsWith("!")) {
                     System.out.println("Woah! Calm down!");
                 } if (userResponse.length() < 1) {
                     System.out.println("Fine. Be that way!");
