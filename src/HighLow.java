@@ -22,16 +22,17 @@ public class HighLow {
             System.out.println("What is your guess?");
             userGuess = scanner.nextInt();
 
-            if (userGuess > gameNumber) {
+            if (userGuess < 1 || userGuess > 100) {
+                System.out.println("I said between 1 and 100!");
+            } else if (userGuess > gameNumber) {
                 System.out.println("LOWER!");
                 userLives--;
                 userGuessesTotal++;
-            } if (userGuess < gameNumber) {
+            } else if (userGuess < gameNumber) {
                 System.out.println("HIGHER!");
                 userLives--;
                 userGuessesTotal++;
             }
-
         } while (userGuess != gameNumber && userLives > 0);
 
         if (userLives == 0) {
@@ -39,6 +40,10 @@ public class HighLow {
         } else {
             System.out.println("Congrats! You guess the number! It only took you... " + (userGuessesTotal + 1) + " attempts.");
         }
+
+
     }
+
+
 
 }
