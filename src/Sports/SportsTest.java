@@ -9,7 +9,7 @@ public class SportsTest {
             Soccer soccer = new Soccer(10);
             Basketball basketball = new Basketball(10);
 
-
+            // creating an array of TYPE SPORTS (from class sports). Each object of the ARRAY is of their sport TYPE.
             Sports[] sport = {baseball, football, soccer, basketball};
 
 
@@ -19,6 +19,10 @@ public class SportsTest {
 
             football.run();
 
+
+      // Create a new "Variable" that is TYPEOF "Sport", but within that variable is an object that is TYPEOF Football
+//
+//
 //        Sports newGame = new Football(10);
 //
 //        newGame.run();
