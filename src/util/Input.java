@@ -18,7 +18,7 @@ public class Input {
         return (userInput.equals("y") || userInput.equals("yes"));
     }
 
-    public int getInt() {
+    public int getInt(){
         if (!scanner.hasNextInt()) {
             System.out.println("Not a valid integer. Try again.");
             scanner.nextLine();
