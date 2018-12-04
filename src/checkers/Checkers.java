@@ -1,5 +1,6 @@
 package checkers;
 
+@SuppressWarnings("Duplicates")
 public class Checkers {
 
     public static int[][] matrix = {
